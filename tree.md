@@ -1,0 +1,57 @@
+stock-erp
+├── .gitignore
+├── db
+├── erp-backend
+│ ├── .env
+│ ├── node_modules
+│ ├── package-lock.json
+│ ├── package.json
+│ ├── src
+│ │ ├── config
+│ │ │ └── db.ts
+│ │ ├── controllers
+│ │ │ └── authController.ts
+│ │ ├── routes
+│ │ │ └── authRoutes.ts
+│ │ └── server.ts
+│ └── tsconfig.json
+└── erp-frontend
+├── .gitignore
+├── README.md
+├── eslint.config.js
+├── index.html
+├── node_modules
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── public
+│ └── vite.svg
+├── src
+│ ├── App.css
+│ ├── App.tsx
+│ ├── assets
+│ │ └── react.svg
+│ ├── components
+│ │ ├── Layout.tsx
+│ │ ├── SideBar.tsx
+│ │ ├── Header.tsx
+│ │ ├── Card.tsx
+│ │ ├── ProtectedRoute.tsx
+│ │ └── PublicRoute.tsx
+│ ├── index.css
+│ ├── main.tsx
+│ ├── pages
+│ │ ├── Home.tsx
+│ │ ├── Login.tsx
+│ │ └── Register.tsx
+│ ├── routes
+│ │ └── AppRoutes.tsx
+│ └── services
+│ │ ├── api.ts
+│ │ ├── authService.ts
+│ │ └──
+├── tailwind.config.js
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts

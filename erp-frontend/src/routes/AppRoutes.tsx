@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+// src/routes/AppRoutes.tsx
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Home from "../pages/Home";
@@ -9,8 +10,6 @@ export default function AppRoutes() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Navigate to="/home" replace />} />
-
                 <Route
                     path="/login"
                     element={
@@ -19,7 +18,6 @@ export default function AppRoutes() {
                         </PublicRoute>
                     }
                 />
-
                 <Route
                     path="/register"
                     element={
@@ -28,7 +26,6 @@ export default function AppRoutes() {
                         </PublicRoute>
                     }
                 />
-
                 <Route
                     path="/home"
                     element={
@@ -37,8 +34,6 @@ export default function AppRoutes() {
                         </ProtectedRoute>
                     }
                 />
-
-                <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
         </BrowserRouter>
     );
