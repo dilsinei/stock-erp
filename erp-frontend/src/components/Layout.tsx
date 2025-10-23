@@ -1,15 +1,17 @@
-// src/components/Layout.tsx
-import Sidebar from "./Sidebar";
+import { Outlet } from "react-router-dom";
 import Header from "./Header";
+import Sidebar from "./Sidebar";
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout() {
     return (
-        <div className="min-h-screen grid grid-cols-[250px_1fr] bg-gray-100">
+        <div className="flex h-screen bg-gray-100">
             <Sidebar />
-            <main className="p-6">
+            <div className="flex-1 flex flex-col">
                 <Header />
-                {children}
-            </main>
+                <main className="flex-1 p-6 overflow-y-auto">
+                    <Outlet /> {/* <- Aqui entram Home, Estoque, etc */}
+                </main>
+            </div>
         </div>
     );
 }
